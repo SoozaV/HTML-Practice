@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.contenedor {
+    width: 100%;
+    min-height: 100vh;
+}
+nav {
+    width: 80%;
+    max-width: 1000px;
+    background: #f2f2f2;
+    margin: 0 auto;
+}
+.cuerpo-principal {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: auto minmax(auto, 600px) minmax(auto, 400px) auto;
+    grid-template-areas: "mainb main aside .";
+}
+header {
+    background: rgb(255, 166, 93);
+    min-height: 400px;
+}
+main {
+    background: rgb(211, 211, 211);
+    grid-area: main;
+    /*margin-top: -38px;*/
+}
+aside {
+    background: rgb(83, 113, 158);
+    grid-area: aside;
+}
+footer {
+    background: rgb(27, 63, 80);
+
+}
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.barra a {
+    display: inline-block;
+    background: rgb(231, 83, 24);
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0;
+}
