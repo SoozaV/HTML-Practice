@@ -76,6 +76,7 @@ main {
 main .contenido {
     max-width: 600px;
     padding-bottom: 100px;
+    padding-right: 50px;
 }
 footer h2, main h2 {
     text-transform: uppercase;
@@ -83,8 +84,7 @@ footer h2, main h2 {
     margin: 10px 0;
 }
 footer .contenido p, main .contenido p {
-    padding: 10px 10px 10px 0;
-    margin-right: 30px;
+    padding: 10px 0;
     line-height: 27px;
 }
 footer .contenido p.desc, main .contenido p.desc {
@@ -92,7 +92,7 @@ footer .contenido p.desc, main .contenido p.desc {
     font-size: 1.2em;
 }
 hr {
-    margin: 20px 40px 40px 0;
+    margin: 20px 0 40px;
 }
 main .contenido::after {
     content: '';
@@ -114,7 +114,7 @@ aside .contenido-aside {
     max-width: 400px;
     padding-top: 250px;
     padding-bottom: 250px;
-    padding-left: 40px;
+    padding-left: 50px;
     color: #fff;
 }
 aside .contenido-aside h2 {
@@ -127,20 +127,17 @@ aside .contenido-aside p {
     font-style: italic;
     font-size: 0.9em;
 }
-aside::before {
+aside::after {
     content: '';
-    background-image: linear-gradient(
-        115deg,
-        #16afadd0,
-        #1ac7c4bd
-      ), url(../img/fondo-aside.jpg) ;
-      background-size: contain;
-    width: 200%;
+    background-image: linear-gradient( 115deg, #16afadd0, #1ac7c4bd ), url(../img/fondo-aside.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 175%;
     height: 100%;
     position: absolute;
     z-index: 99;
     left: 0;
-    bottom: -100%;
+    top: 100%;
 }
 footer {
     background: #f26c4f;
@@ -149,9 +146,14 @@ footer {
 }
 footer .contenido {
     max-width: 600px;
+    width: 60%;
     padding-top: 100px;
     padding-bottom: 100px;
+    padding-right: 50px;
     color: #fff;
+}
+footer .footerspan {
+    width: 40%;
 }
 .barra {
     display: flex;
@@ -170,6 +172,10 @@ footer .contenido {
     justify-content: center;
     align-items: center;
 }
+.barra .btn {
+    position: relative;
+    left: 50px;
+}
 footer .btn {
     background: #fff;
     color: #f26c4f;
@@ -180,10 +186,27 @@ footer .btn {
     margin-top: 55px;
 }
 @media screen and (max-width: 768px) {
-    main {
+    main, aside, .contenedor {
         width: 100%;
     }
-    aside {
+    main .contenido, footer .contenido {
+        padding-left: 40px;
+        padding-right: 40px;
         width: 100%;
+        max-width: none;
+    }
+    aside .contenido-aside {
+        max-width: none;
+        padding-top: 120px;
+        padding-bottom: 520px;
+        padding-left: 40px;
+        color: #fff;
+        padding-right: 40px;
+    }
+    aside::after {
+        height: 420px;
+        bottom: 0px;
+        width: 100%;
+        top: auto;
     }
 }
