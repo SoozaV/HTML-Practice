@@ -109,7 +109,7 @@ header {
                     a {
                         text-decoration: none;
                         text-transform: uppercase;
-                        color: white;
+                        color: $principal;
                         margin: 0 20px;
                         font-size: 14px;
                         font-weight: 700;
@@ -118,6 +118,7 @@ header {
                             color: $secundario;
                         }
                         @media screen and (max-width: 768px) {
+                            color: white;
                             font-size: 25px;
                         }
                     }

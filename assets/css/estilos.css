@@ -148,7 +148,7 @@ header nav #menuToggle ul li {
 header nav #menuToggle ul li a {
   text-decoration: none;
   text-transform: uppercase;
-  color: white;
+  color: #003046;
   margin: 0 20px;
   font-size: 14px;
   font-weight: 700;
@@ -159,6 +159,7 @@ header nav #menuToggle ul li a:hover {
 }
 @media screen and (max-width: 768px) {
   header nav #menuToggle ul li a {
+    color: white;
     font-size: 25px;
   }
 }
