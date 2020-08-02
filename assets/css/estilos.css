@@ -1,0 +1,237 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  background: #1c7199;
+  font-family: "Nunito Sans", sans-serif;
+  overflow-x: hidden;
+}
+body h1, body h2 {
+  text-transform: uppercase;
+}
+body h2 {
+  font-size: 2.5em;
+  margin: 10px 0;
+}
+body h3 {
+  font-family: "PT Serif", serif;
+  font-size: 0.8em;
+}
+body hr {
+  margin: 20px 0 40px;
+}
+
+header {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.507), #ffffff2d, #fff), url(../img/casa_portada.jpg);
+  background-size: cover;
+  background-position: center center;
+  min-height: 545px;
+}
+header .logo {
+  width: 200px;
+  margin: 15px 0;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav ul {
+  list-style: none;
+}
+header nav ul li {
+  display: inline-block;
+}
+header nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #003046;
+  margin: 0 20px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+}
+header nav ul li a:hover {
+  color: #ff3c61;
+}
+
+.contenedor {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .contenedor {
+    width: 100%;
+  }
+}
+.contenedor main {
+  background: #fff;
+  width: 60%;
+  float: left;
+  margin-top: -40px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 30;
+  color: #003046;
+}
+@media screen and (max-width: 768px) {
+  .contenedor main {
+    width: 100%;
+  }
+}
+.contenedor main .contenido {
+  max-width: 600px;
+  padding-bottom: 100px;
+  padding-right: 50px;
+}
+@media screen and (max-width: 768px) {
+  .contenedor main .contenido {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+    max-width: none;
+  }
+}
+.contenedor main .contenido::after {
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -10;
+  left: -100%;
+  top: 0;
+}
+.contenedor main .contenido .barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.contenedor main .contenido .barra .btn {
+  position: relative;
+  left: 50px;
+}
+.contenedor aside {
+  background: #1c7199;
+  width: 40%;
+  float: left;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .contenedor aside {
+    width: 100%;
+  }
+}
+.contenedor aside ::after {
+  content: "";
+  background-image: linear-gradient(115deg, #1c7199d8, #1c719998), url(../img/fondo-aside.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 175%;
+  height: 100%;
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  top: 100%;
+}
+@media screen and (max-width: 768px) {
+  .contenedor aside ::after {
+    height: 420px;
+    bottom: 0px;
+    width: 100%;
+    top: auto;
+  }
+}
+.contenedor aside .contenido-aside {
+  max-width: 400px;
+  padding-top: 250px;
+  padding-bottom: 250px;
+  padding-left: 50px;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .contenedor aside .contenido-aside {
+    max-width: none;
+    padding-top: 120px;
+    padding-bottom: 520px;
+    padding-left: 40px;
+    color: #fff;
+    padding-right: 40px;
+  }
+}
+.contenedor aside .contenido-aside h2 {
+  font-weight: 300;
+  font-size: 1.7em;
+}
+.contenedor aside .contenido-aside p {
+  margin-top: 30px;
+  line-height: 27px;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+footer {
+  background: #003046;
+  overflow: auto;
+  width: 100%;
+}
+footer .contenido {
+  max-width: 600px;
+  width: 60%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-right: 50px;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  footer .contenido {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+    max-width: none;
+  }
+}
+footer .contenido .footerspan {
+  width: 40%;
+}
+footer .contenido .footxt {
+  font-size: 0.9em;
+  margin-top: 55px;
+}
+footer .btn {
+  background: #fff;
+  color: #ff3c61;
+  margin: 30px 0 20px;
+}
+
+footer .contenido p, main .contenido p {
+  padding: 10px 0;
+  line-height: 27px;
+}
+
+footer .contenido p.desc, main .contenido p.desc {
+  font-family: "PT Serif", serif;
+  font-size: 1.2em;
+}
+
+.btn {
+  background: #ff3c61;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 200px;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=estilos.css.map */
