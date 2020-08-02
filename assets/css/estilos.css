@@ -12,7 +12,7 @@ body {
   overflow-x: hidden;
 }
 body h1, body h2 {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 body h2 {
   font-size: 2.5em;
@@ -27,7 +27,7 @@ body hr {
 }
 
 header {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.507), #ffffff2d, #fff), url(../img/casa_portada.jpg);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.507), #ffffff2d, rgba(255, 255, 255, 0.623), #ffffff2d, #fff), url(../img/casa_portada.jpg);
   background-size: cover;
   background-position: center center;
   min-height: 545px;
@@ -59,6 +59,16 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #ff3c61;
 }
+header .portada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
+header .portada h1 {
+  text-transform: uppercase;
+  color: #003046;
+}
 
 .contenedor {
   width: 80%;
@@ -88,7 +98,7 @@ header nav ul li a:hover {
 }
 .contenedor main .contenido {
   max-width: 600px;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
   padding-right: 50px;
 }
 @media screen and (max-width: 768px) {
@@ -109,6 +119,26 @@ header nav ul li a:hover {
   left: -100%;
   top: 0;
 }
+.contenedor main .contenido::before {
+  content: "";
+  background-image: linear-gradient(115deg, #1c7199d8, #1c719998), url(../img/fondo-aside.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  width: 100%;
+  height: 960px;
+  position: absolute;
+  z-index: 99;
+  right: -100%;
+  bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .contenedor main .contenido::before {
+    height: 420px;
+    right: 0;
+    bottom: -420px;
+  }
+}
 .contenedor main .contenido .barra {
   display: flex;
   justify-content: space-between;
@@ -118,41 +148,50 @@ header nav ul li a:hover {
 .contenedor main .contenido .barra .btn {
   position: relative;
   left: 50px;
+  border-radius: inherit;
+}
+.contenedor main .contenido img {
+  max-width: 100%;
+}
+.contenedor main .contenido article a {
+  text-decoration: inherit;
+  color: inherit;
+}
+.contenedor main .contenido article a:hover {
+  color: #1c7199;
 }
 .contenedor aside {
-  background: #1c7199;
   width: 40%;
   float: left;
   position: relative;
+  /*&::after {
+      content: '';
+      background-image: linear-gradient( 115deg, #1c7199d8, #1c719998 ), url(../img/fondo-aside.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      width: 175%;
+      height: 100%;
+      position: absolute;
+      z-index: 99;
+      left: 0;
+      top: 100%;
+      @media screen and (max-width: 768px) {
+          height: 420px;
+          bottom: 0px;
+          width: 100%;
+          top: auto;
+      }
+  }*/
 }
 @media screen and (max-width: 768px) {
   .contenedor aside {
     width: 100%;
   }
 }
-.contenedor aside ::after {
-  content: "";
-  background-image: linear-gradient(115deg, #1c7199d8, #1c719998), url(../img/fondo-aside.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 175%;
-  height: 100%;
-  position: absolute;
-  z-index: 99;
-  left: 0;
-  top: 100%;
-}
-@media screen and (max-width: 768px) {
-  .contenedor aside ::after {
-    height: 420px;
-    bottom: 0px;
-    width: 100%;
-    top: auto;
-  }
-}
 .contenedor aside .contenido-aside {
   max-width: 400px;
-  padding-top: 250px;
+  padding-top: 60px;
   padding-bottom: 250px;
   padding-left: 50px;
   color: #fff;
@@ -160,8 +199,8 @@ header nav ul li a:hover {
 @media screen and (max-width: 768px) {
   .contenedor aside .contenido-aside {
     max-width: none;
-    padding-top: 120px;
-    padding-bottom: 520px;
+    padding-top: 480px;
+    padding-bottom: 60px;
     padding-left: 40px;
     color: #fff;
     padding-right: 40px;
@@ -172,20 +211,40 @@ header nav ul li a:hover {
   font-size: 1.7em;
 }
 .contenedor aside .contenido-aside p {
-  margin-top: 30px;
+  margin-top: 17px;
   line-height: 27px;
   font-style: italic;
   font-size: 0.9em;
+}
+.contenedor aside .contenido-aside article {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+.contenedor aside .contenido-aside article img {
+  max-width: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+.contenedor aside .contenido-aside article h3 {
+  font-family: inherit;
+  font-size: inherit;
+  margin: 10px 0;
 }
 
 footer {
   background: #003046;
   overflow: auto;
   width: 100%;
+  background-image: linear-gradient(115deg, #003046c0, #003046, #003046), url(../img/fondo-footer.jpg);
 }
 footer .contenido {
   max-width: 600px;
   width: 60%;
+  float: left;
   padding-top: 100px;
   padding-bottom: 100px;
   padding-right: 50px;
@@ -206,10 +265,40 @@ footer .contenido .footxt {
   font-size: 0.9em;
   margin-top: 55px;
 }
-footer .btn {
+footer .contenido .btn {
   background: #fff;
   color: #ff3c61;
   margin: 30px 0 20px;
+}
+footer aside {
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+footer aside input, footer aside textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 12px;
+  margin: 5px 0;
+}
+footer aside textarea {
+  max-height: 200px;
+  min-height: 100px;
+}
+footer aside .btn {
+  margin-top: 0;
+}
+@media screen and (max-width: 768px) {
+  footer aside {
+    padding: 0 40px 60px;
+  }
 }
 
 footer .contenido p, main .contenido p {
@@ -223,6 +312,8 @@ footer .contenido p.desc, main .contenido p.desc {
 }
 
 .btn {
+  margin: 0 auto;
+  margin-top: 60px;
   background: #ff3c61;
   color: white;
   text-transform: uppercase;
@@ -232,6 +323,17 @@ footer .contenido p.desc, main .contenido p.desc {
   height: 40px;
   justify-content: center;
   align-items: center;
+  border: none;
+  outline: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.listado {
+  margin: initial;
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=estilos.css.map */
