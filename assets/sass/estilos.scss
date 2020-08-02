@@ -35,49 +35,7 @@ body {
         margin: 20px 0 40px;
     }
 }
-header {
-    background-image: linear-gradient( 180deg,rgba(255, 255, 255, 0.507),#ffffff2d,rgba(255, 255, 255, 0.623), #ffffff2d, #fff), url(../img/casa_portada.jpg);
-    background-size: cover;
-    background-position: center center;
-    min-height: 545px;
-    .logo {
-        width: 200px;
-        margin: 15px 0;
-    }
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        ul {
-            list-style: none;
-            li {
-                display: inline-block;
-                a {
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    color: $principal;
-                    margin: 0 20px;
-                    font-size: 14px;
-                    font-weight: 700;
-                    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
-                    &:hover {
-                        color: $secundario;
-                    }
-                }
-            }
-        }
-    }
-    .portada {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 350px;
-        h1 {
-            text-transform: uppercase;
-            color: #003046;
-        }
-    }
-}
+@import "_header";
 .contenedor {
     width: 80%;
     max-width: 1000px;
