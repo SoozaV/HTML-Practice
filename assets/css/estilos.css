@@ -4,6 +4,7 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  outline: none;
 }
 
 body {
@@ -327,6 +328,7 @@ header .portada h1 {
   font-size: 0.9em;
 }
 .contenedor aside .contenido-aside article {
+  position: relative;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -342,7 +344,11 @@ header .portada h1 {
 .contenedor aside .contenido-aside article h3 {
   font-family: inherit;
   font-size: inherit;
-  margin: 10px 0;
+}
+.contenedor aside .contenido-aside article div {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
 }
 
 footer {

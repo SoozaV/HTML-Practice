@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap&family=PT+Serif:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="assets/css/cajas.css">
 </head>
 <body>
     <header>
@@ -67,7 +68,7 @@
         </main>
         <aside>
             <div class="contenido-aside">
-                <article class="propiedades">
+                <!--article class="propiedades">
                     <h2>Casa en Venta</h2>
                     <img src="assets/img/casa_1.jpg" alt="Casa en Venta">
                     <h3>Precio: <span>$1,300,000.°°</span></h3>
@@ -79,7 +80,15 @@
                     <img src="assets/img/casa_1.jpg" alt="Casa en Venta">
                     <h3>Precio: <span>$1,300,000.°°</span></h3>
                     <p>Casa con excelente ubicación Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias repellendus nam tempore illum, ad unde quam assumenda, enim consectetur exercitationem dolorum modi corrupti similique.</p>
-                </article>
+                </article-->
+                    <button class="boton-nueva-caja" style="margin-bottom: 10px; margin-top: 10px;" onclick="crear();">Nueva Casa</button>
+                    <article class="propiedades">
+                        <h2>Casa en Venta</h2>
+                        <img src="assets/img/casa_1.jpg" alt="Casa en Venta">
+                        <h3>Precio: <span>$1,300,000.°°</span></h3>
+                        <p>Casa con excelente ubicación Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias repellendus nam tempore illum, ad unde quam assumenda, enim consectetur exercitationem dolorum modi corrupti similique.</p>
+                        <button class="boton">Borrar</button>
+                    </article>
             </div>
         </aside>
     </div>
@@ -111,5 +120,6 @@
             </aside>
         </div>
     </footer>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

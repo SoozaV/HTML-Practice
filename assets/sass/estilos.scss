@@ -15,6 +15,7 @@ $terciario: #1c7199;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    outline: none;
 }
 body {
     background: $terciario;
@@ -170,6 +171,7 @@ body {
                 font-size: 0.9em;
             }
             article {
+                position: relative;
                 @include border-radius(5px);
                 img {
                     max-width: 100%;
@@ -178,7 +180,11 @@ body {
                 h3 {
                     font-family: inherit;
                     font-size: inherit;
-                    margin: 10px 0;
+                }
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 5px 0;
                 }
             }
         }
